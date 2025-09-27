@@ -44,7 +44,8 @@ function progressBar(ctx, x, y, width, radius, progress) {
 async function makeCard(data) {
     const { savePath, avatarPath, name, rank, exp, level, expToNextLevel } = data;
     try {
-        const template = await Canvas.loadImage(join(global.assetsPath, 'rank_card.png'));
+        const template = await Canvas.loadImage("https://i.ibb.co/qZwsKy7/image.jpg");
+
         const avatar = await Canvas.loadImage(avatarPath);
         const circledAvatar = global.circle(avatar, avatar.width / 2, avatar.height / 2, avatar.width / 2);
 
@@ -85,7 +86,7 @@ async function makeCard(data) {
 }
 
 const langData = {
-    "en_US": {
+    "ar_SY.yml": {
         "rank_all_local": "--- Leaderboard ---\n👤 Your exp: {senderExp} #{senderRank}\n📕 Members:\n{allData}",
         "rank_all_global": "--- Leaderboard ---\n👤 Your exp: {senderExp} #{senderRank}\n📕 Global Top 20:\n{allData}",
     },
